@@ -32,6 +32,7 @@ router.get('/assistant/:id', function(req, res, next) {
 router.post('/newAssistant', function(req, res, next) {
     var assistant = req.body;
     if (!assistant.name) {
+        console.log(assistant);
         res.status(400);
         res.json({
             "error": "Invalid Data",
